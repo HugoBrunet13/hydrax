@@ -7,10 +7,10 @@ res.writeHead(200);
 
 testCezex = async () =>{
     let cezex    = new ccxt.cezex();
-   console.log(cezex.id);
+   console.log(cezex.name,'\n');
 
-    console.log("market:\n",await cezex.fetchMarkets());
-  //  console.log("\tickers:\n",await cezex.fetchTickers());
+    //console.log("market:\n",await cezex.fetchMarkets());
+    console.log("\ntickers:\n",await cezex.fetchTickers());
     //console.log(kraken.id, await kraken.fetchOrderBook(kraken.symbols[0]));
 }
 
@@ -27,14 +27,16 @@ testBinance = async () =>{
     let binance    = new ccxt.binance();
    console.log(binance.name);
 
+
  //   console.log("market:\n",await binance.fetchMarkets());
-   // console.log("\tickers:\n",await binance.fetchTickers());
+    //console.log("\ntickers:\n",await binance.fetchTickers());
     //console.log(kraken.id, await kraken.fetchOrderBook(kraken.symbols[0]));
+    console.log('binance: BTC/USD =>\n', await binance.fetchTicker("BNBBTC"))
 }
 
-testCezex();
+//testCezex();
 //testBxinth();
-//testBinance();
+testBinance();
 res.end('Hi everybody!');
 });
 server.listen(8080);
