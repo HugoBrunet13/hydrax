@@ -10,7 +10,7 @@ testCezex = async () =>{
    console.log(cezex.id);
 
     console.log("market:\n",await cezex.fetchMarkets());
-    console.log("\tickers:\n",await cezex.fetchTickers());
+  //  console.log("\tickers:\n",await cezex.fetchTickers());
     //console.log(kraken.id, await kraken.fetchOrderBook(kraken.symbols[0]));
 }
 
@@ -32,9 +32,9 @@ testBinance = async () =>{
     //console.log(kraken.id, await kraken.fetchOrderBook(kraken.symbols[0]));
 }
 
-//testCezex();
+testCezex();
 //testBxinth();
-testBinance();
+//testBinance();
 res.end('Hi everybody!');
 });
 server.listen(8080);
