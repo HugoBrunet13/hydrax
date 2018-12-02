@@ -19,15 +19,17 @@ testCezex = async () =>{
     //console.log('\nCEZEX trades BTC/USD => \n',await cezex.fetchTrades("BTC/USD",10))
     //console.log('\nCEZEX OHLCV BTC/USD => \n',await cezex.fetchOHLCV("BTC/USD",'1d'))
 
-    console.log('CEZEX fetchOpenOrders(\'BTC/USD\') OPEN order  => \n', await cezex.fetchOpenOrders('BTC/USD'));
-    console.log('\n-----------------\nCEZEX fetchOrders(\'BTC/USD\') CLOSED orders => \n', await cezex.fetchClosedOrders('BTC/USD'));
-    console.log('\n-----------------\nCEZEX fetchOrders(\'BTC/USD\') ALL orders => \n', await cezex.fetchOrders('BTC/USD'));
+    // console.log('CEZEX fetchOpenOrders(\'BTC/USD\') OPEN order  => \n', await cezex.fetchOpenOrders('BTC/USD'));
+    // console.log('\n-----------------\nCEZEX fetchClosedOrders(\'BTC/USD\') CLOSED orders => \n', await cezex.fetchClosedOrders('BTC/USD'));
+    console.log('\n-----------------\nCEZEX fetchAllOrders(\'XRP/ETH\') ALL orders => \n', await cezex.fetchOrders('XRP/ETH'));
 
+    //console.log('\n-----------------\nCEZEX fetchDepositAddress(\'BTC\') => \n', await cezex.fetchDepositAddress('BTC'));
     //console.log('CEZEX FetchOrder(ID=1191) => \n', await cezex.fetchOrder(1191,'DASH/ETH'));
-    //console.log('CEZEX createOrder(\'BTC/USD\') => \n', await cezex.createOrder('BTC/USD','limit','sell',1,11500));
+    //console.log('CEZEX createOrder(\'XRP/ETH\') => \n', await cezex.createOrder('XRP/ETH','limit','sell',3,0.003));
 
-
+    console.log('CEZEX fetchMyTrades(XRP/ETH) => \n', await cezex.fetchMyTrades('XRP/ETH'));
    // console.log('CEZEX delete(ID=1191) => \n', await cezex.cancelOrder(1191,'DASH/ETH'));
+   console.log('CEZEX balance => \n', await cezex.fetchBalance());
 }
 
 
